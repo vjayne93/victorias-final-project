@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ heading }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, p {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .button-group button {
+            flex: 1;
+        }
+        .reset-button {
+            width: auto; /* Change the width to auto */
+            padding: 10px 20px; /* Add padding for better appearance */
+            background-color: #ff6347;
+            margin-top: 10px;
+        }
+        .reset-button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ heading }}</h1>
+        
+        <p>
+            Welcome to the Philly Food Site Locator. To use this application, please enter your address including the city and state. 
+            <i>Example: 1400 John F Kennedy Blvd, Philadelphia PA</i><br>
+            This application currently only supports addresses within a 12 mile radius of Philadelphia, PA.<br>
+            This website is a project of 
+            <a href="http://www.southphillyfridge.com" target="_blank">South Philadelphia Community Fridge</a>.
+        </p>
+
+        <form id="mainForm" method="post" action="/">
+            <label for="address">Enter your address:</label>
+            <input type="text" id="address" name="address" value="{{ request.form.address }}" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if nearest_sites %}
+            <h2>Nearest Open Food Sites</h2>
+            <div>
+                {{ nearest_sites | safe }}
+            </div>
+        {% endif %}
+
+        {% if next_sites %}
+            <h2>Next 5 Food Sites Opening Soonest</h2>
+            <div>
+                {{ next_sites | safe }}
+            </div>
+        {% endif %}
+
+        {% if more_sites %}
+            <form method="post" action="/">
+                <input type="hidden" name="address" value="{{ request.form.address }}">
+                <div class="button-group">
+                    {% if not closest_shown %}
+                        <button type="submit" name="continue_prompt" value="closest">Show the 5 Next Closest Sites</button>
+                    {% endif %}
+                    <button type="submit" name="continue_prompt" value="opening">Show the 5 Next Sites to Open</button>
+                </div>
+            </form>
+        {% endif %}
+
+        <button class="reset-button" onclick="resetForm()">Restart</button>
+    </div>
+    
+    <script>
+        function resetForm() {
+            document.getElementById("mainForm").reset();
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
