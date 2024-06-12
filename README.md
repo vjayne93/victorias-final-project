@@ -14,8 +14,11 @@ My project analyzes a list of free food sites within the City of Philadelphia ob
 
 ## Data Sources
 
+* [City of Philadelphia: Food and Meal Finder](https://www.phila.gov/food)
 * [US Census Bureau: Poverty Status in the Last 12 Months, 2020](https://data.census.gov/table?q=Poverty&g=050XX00US42101,42101$1400000)
 * [USDA ERS: Understanding Low-Income and Low-Access Census Tracts Across the Nation: Subnational and Subpopulation Estimates of Access to Healthy Food, May 2019](https://www.ers.usda.gov/publications/pub-details/?pubid=93140)
 * [My Sidewalk: Food Insecurity- An analysis of food insecurity and its impact in your community](https://reports.mysidewalk.com/e3daa45043)
-* [US Census Bureau: TIGER/Line Shapefile, 2019, county, Philadelphia County, PA, Topological Faces (Polygons With All Geocodes) County-based Shapefile](https://catalog.data.gov/dataset/tiger-line-shapefile-2019-county-philadelphia-county-pa-topological-faces-polygons-with-all-geo)
-* 
+* [US Census Bureau: TIGER/Line Shapefile, 2019, county, Philadelphia County, PA](https://catalog.data.gov/dataset/tiger-line-shapefile-2019-county-philadelphia-county-pa-topological-faces-polygons-with-all-geo)
+
+  ## Acknowledgements
+  This project was possible through the work of the 100% volunteer team at [South Philadelphia Community Fridge](www.southphillyfridge.com). Special thanks to volunteer Doron Shore for data entry and application testing. 
