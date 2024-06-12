@@ -20,5 +20,5 @@ My project analyzes a list of free food sites within the City of Philadelphia ob
 * [My Sidewalk: Food Insecurity- An analysis of food insecurity and its impact in your community](https://reports.mysidewalk.com/e3daa45043)
 * [US Census Bureau: TIGER/Line Shapefile, 2019, county, Philadelphia County, PA](https://catalog.data.gov/dataset/tiger-line-shapefile-2019-county-philadelphia-county-pa-topological-faces-polygons-with-all-geo)
 
-  ## Acknowledgements
-  This project was possible through the work of the 100% volunteer team at [South Philadelphia Community Fridge](www.southphillyfridge.com). Special thanks to volunteer Doron Shore for data entry and application testing. 
+## Acknowledgements
+This project was possible through the work of the 100% volunteer team at [South Philadelphia Community Fridge](www.southphillyfridge.com). Special thanks to volunteer Doron Shore for data entry and application testing. 
