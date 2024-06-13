@@ -22,7 +22,9 @@ This zoomed-in image above shows how my intial Cluster Analysis indicated that o
 My second analysis weighed the percentage of people living under the poverty line as three-times more significant than all other features. This second analysis indicated primarily high-poverty census tracts as the areas of highest need. <br>
 <img src="https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/weighted_analysis_image.png" alt="Weighted Cluster Analysis Image" width="500">
 <br><br>
-The process of my K-Means Cluster Analysis is described below: 
+My analysis indicates that the census tracts indicated in red have the highest levels of poverty and people able to obtain healthy food, combined with the lowest number of free food sites and total free food site operating hours. These census tracts should be prioritized by the City and hunger relief organizations for additional free food resources.<br><br> 
+
+<b>The process of my K-Means Cluster Analysis is described below: </b>
 * Clean datasets downloaded from the City of Philadelphia and Share Food Program to standardize addresses and hours of operation for all sites. Record cleaned data in a new spreadsheet. Filter data to Philadelphia sites only. 
 * Load cleaned data into a Jupyter Notebook data frame. Due to the size of the dataset, I did not use a database tool to store the data. 
 * Use OpenCageGeoCode API to assign a latitude and longitude value to all food sites. Create new data frame with these coordinates.
@@ -31,6 +33,11 @@ The process of my K-Means Cluster Analysis is described below:
 * Create BallTree to do spacial analysis of food sites and determine the number of food sites within a one-mile radius of each census tract.
 * Complete K-Means Cluster Analysis of the features of each census tract. Sort data into three clusters indicating least need, normal need, and highest need.
 * Complete second K-Means Cluster Analysis which weighs poverty as three-times more significant than the other features to create a more accurate assesment of need. 
+<br><br><br>
+## Part II: Web Application
+With the clean dataset of free food sites in the Philadelphia area I used in Part I of my project, I created a Python web application which finds the nearest open free food site to the user's address. Existing applications to find free food sites rely on complex websites with maps and multiple filtering options. These applications can be challenging for people in need of free food. Barriers include applications not being optimized for mobile use, low tech literacy among users, poor eyesite or limited dexterity using a device, limited English language skills, and applications using significant amounts of data. My intent was to make the most simple and functional applications to tell users where they can get free food, right now. <br><br>
+My application uses a Python function to determine what free food sites are open at the current date and time based on my existing dataset. The user enters their address, and the application uses a geocoding API to locate the user and list the five current open food sites which are closest to the entered address. The user can request the next five closest sites which are open now. A second function finds the sites which are opening the soonest and reports them to the user.
+
 
 
 ## Data Sources
@@ -42,4 +49,4 @@ The process of my K-Means Cluster Analysis is described below:
 * [US Census Bureau: TIGER/Line Shapefile, 2019, county, Philadelphia County, PA](https://catalog.data.gov/dataset/tiger-line-shapefile-2019-county-philadelphia-county-pa-topological-faces-polygons-with-all-geo)
 
 ## Acknowledgements
-This project was possible through the work of the 100% volunteer team at [South Philadelphia Community Fridge](www.southphillyfridge.com). Special thanks to volunteer Doron Shore for data entry and application testing. 
+This project was possible through the work of the 100% volunteer team at [South Philadelphia Community Fridge](www.southphillyfridge.com). Special thanks to volunteer Doron Shore for data entry and application testing. Thanks to Teaching Assistant Jake Byford for assistance with selecting an unsupervised learning method. 
