@@ -11,8 +11,11 @@ My project analyzes a list of 286 free food sites within the City of Philadelphi
 The K-Means Cluster Analysis classifies each census tract in Philadelphia as least need, average need, and highest need for additional food sites. This classification is based upon the following features: the percentage of people with low access to healthy food, the percentage of people living under the poverty line in each census tract, the number of food sites within one mile of each census tract, and the total food site operating hours within one mile of each census tract. 
 
 I completed two K-Means Cluster Analyses. The first weighted all features with the same importance. My first analysis indicated many census tracts in wealthy neighborhoods as part of the highest need group, because these neighborhoods have few free food sites. 
+![Image of Map with Unweighted Clusters](https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/unweighted_analysis_image.png)
+![Detail of Unweighted Cluster Map](https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/detail_unweighted_analysis.png)
 
 My second analysis weighed the percentage of people living under the poverty line as three-times more significant than all other features. This second analysis indicated primarily high-poverty census tracts as the areas of highest need. 
+![Weighed Cluster Map Image](https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/weighted_analysis_image.png) 
 
 The process of my K-Means Cluster Analysis is described below: 
 * Clean datasets downloaded from the City of Philadelphia and Share Food Program to standardize addresses and hours of operation for all sites. Record cleaned data in a new spreadsheet. Filter data to Philadelphia sites only. 
