@@ -23,7 +23,8 @@ My second analysis weighed the percentage of people living under the poverty lin
 <img src="https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/weighted_analysis_image.png" alt="Weighted Cluster Analysis Image" width="500">
 <br><br>
 My analysis indicates that the census tracts indicated in red have the highest levels of poverty and people able to obtain healthy food, combined with the lowest number of free food sites and total free food site operating hours. These census tracts should be prioritized by the City and hunger relief organizations for additional free food resources.<br><br> 
-
+<br><br>
+My project is limited by the amount of data and the accuracy of the data which I used as features within my analysis. Additional analysis could be completed using more datasets as features, including data on food insecurity, preventable disease, and other related data.<br><br> 
 <b>The process of my K-Means Cluster Analysis is described below: </b>
 * Clean datasets downloaded from the City of Philadelphia and Share Food Program to standardize addresses and hours of operation for all sites. Record cleaned data in a new spreadsheet. Filter data to Philadelphia sites only. 
 * Load cleaned data into a Jupyter Notebook data frame. Due to the size of the dataset, I did not use a database tool to store the data. 
@@ -33,11 +34,16 @@ My analysis indicates that the census tracts indicated in red have the highest l
 * Create BallTree to do spacial analysis of food sites and determine the number of food sites within a one-mile radius of each census tract.
 * Complete K-Means Cluster Analysis of the features of each census tract. Sort data into three clusters indicating least need, normal need, and highest need.
 * Complete second K-Means Cluster Analysis which weighs poverty as three-times more significant than the other features to create a more accurate assesment of need. 
-<br><br><br>
+<br><br><br><br>
 ## Part II: Web Application
-With the clean dataset of free food sites in the Philadelphia area I used in Part I of my project, I created a Python web application which finds the nearest open free food site to the user's address. Existing applications to find free food sites rely on complex websites with maps and multiple filtering options. These applications can be challenging for people in need of free food. Barriers include applications not being optimized for mobile use, low tech literacy among users, poor eyesite or limited dexterity using a device, limited English language skills, and applications using significant amounts of data. My intent was to make the most simple and functional applications to tell users where they can get free food, right now. <br><br>
+With the clean dataset of free food sites in the Philadelphia area I used in Part I of my project, I created a Python web application called [Philly Food Finder](https://philly-food-finder-5ea79faeb9e3.herokuapp.com). The application finds the nearest open free food site to the user's address. Existing applications to find free food sites rely on complex websites with maps and multiple filtering options. These applications can be challenging for people in need of free food. Barriers include applications not being optimized for mobile use, low tech literacy among users, poor eyesite or limited dexterity using a device, limited English language skills, and applications using significant amounts of data. My intent was to make the most simple and functional applications to tell users where they can get free food, right now. <br>
 My application uses a Python function to determine what free food sites are open at the current date and time based on my existing dataset. The user enters their address, and the application uses a geocoding API to locate the user and list the five current open food sites which are closest to the entered address. The user can request the next five closest sites which are open now. A second function finds the sites which are opening the soonest and reports them to the user.
-
+<br><br>
+I am currently looking for grant funding or sponsorship for the application, which will cost an estimated $660 per year to run in the current version, with potentially increased costs for additional features and development. <br><br> 
+<b>My plans for additional development include:</b>
+* Adding an input for the user's age and providing results for age-restricted free food sites, including senior meal sites and student meal sites.
+* Translation of the application into Spanish and Simplified Chinese.
+* Adding a feature to allow the user to share their location with the application, rather than entering their address.
 
 
 ## Data Sources
