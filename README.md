@@ -12,7 +12,8 @@ The K-Means Cluster Analysis classifies each census tract in Philadelphia as lea
 The feature <i>percentage of people with low access to healthy food</i> was calculated by the USDA's [May 2019 report](https://www.ers.usda.gov/publications/pub-details/?pubid=93140) on areas of low food access, also known as "food deserts." 
 
 I completed two K-Means Cluster Analyses. The first weighted all features with the same importance. My first analysis indicated many census tracts in wealthy neighborhoods as part of the highest need group, because these neighborhoods have few free food sites. <br><br>
-<img src="https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/unweighted_analysis_image.png" alt="Unweighed Cluster Analysis Image" width="500">
+<img src="https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/unweighted_analysis_image.png" alt="Unweighed Cluster Analysis Image" width="500"><br>
+This image from my initial analysis shows the highest need areas in red, average need in yellow, and lowest need in green. It is inconsistent with the general understanding of poverty and food access in Philadelphia.
 <br><br>
 <img src="https://github.com/vjayne93/victorias-final-project/blob/main/cluster_analysis/maps/detail_unweighted_analysis.png" alt="Detail Unweighed Cluster Analysis" width="500"><br>
 This zoomed-in image above shows how my intial Cluster Analysis indicated that one of the wealthiest census tracts in the city had the highest need of additional free food sites. 
