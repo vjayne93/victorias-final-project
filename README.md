@@ -39,8 +39,12 @@ My project is limited by the amount of data and the accuracy of the data which I
 With the clean dataset of free food sites in the Philadelphia area I used in Part I of my project, I created a Python web application called [Philly Food Finder](https://philly-food-finder-5ea79faeb9e3.herokuapp.com). The application finds the nearest open free food site to the user's address. Existing applications to find free food sites rely on complex websites with maps and multiple filtering options. These applications can be challenging for people in need of free food. Barriers include applications not being optimized for mobile use, low tech literacy among users, poor eyesite or limited dexterity using a device, limited English language skills, and applications using significant amounts of data. My intent was to make the most simple and functional applications to tell users where they can get free food, right now. <br>
 My application uses a Python function to determine what free food sites are open at the current date and time based on my existing dataset. The user enters their address, and the application uses a geocoding API to locate the user and list the five current open food sites which are closest to the entered address. The user can request the next five closest sites which are open now. A second function finds the sites which are opening the soonest and reports them to the user.
 <br><br>
-<img src="https://github.com/vjayne93/victorias-final-project/blob/main/application/images/homepage.png" alt="Application Home Page" width="1000">
-
+<img src="https://github.com/vjayne93/victorias-final-project/blob/main/application/images/homepage.png" alt="Application Home Page" width="1100">
+<br>This image shows the application homepage. <br><br>
+<img src="https://github.com/vjayne93/victorias-final-project/blob/main/application/images/nearest_sites_example.png" alt="Nearest Sites" width="1100">
+<br>This image shows the "Nearest Sites Open Now" function.<br><br>
+<img src="https://github.com/vjayne93/victorias-final-project/blob/main/application/images/next_sites_example.png" alt="Next Open Sites" width="1100">
+<br>This image shows the "Next Open Sites" function.
 <br><br>
 I am currently looking for grant funding or sponsorship for the application, which will cost an estimated $660 per year to run in the current version, with potentially increased costs for additional features and development. <br><br> 
 <b>My plans for additional development include:</b>
